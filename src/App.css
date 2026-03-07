@@ -2,37 +2,49 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* div for overall page, holding the images/text */
+.App-body {
+  background-image: url("./pixel-components/front-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  background-size: 40%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center;  
 }
 
-.App-link {
-  color: #61dafb;
+.About-body{
+  background-image: url("./pixel-components/book-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  background-size:80%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* the main image on the home page */
+/* .home{
+  width: 40%;
+  height: 40%;
+  display: block;
+  image-rendering: pixelated;
+} */
+
+.about{
+  width: 80%;
+  height: 80%;
+  display: block;
+  image-rendering: pixelated;
 }
+
