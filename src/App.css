@@ -18,6 +18,21 @@
   justify-content: center;  
 }
 
+.App-body{
+  min-height: 100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.home{
+  width:40%;
+  height:auto;
+  display:block;
+  image-rendering: pixelated;
+}
+
 .About-body{
   background-image: url("./pixel-components/book-page.png");
   background-repeat: no-repeat;
@@ -25,6 +40,66 @@
   background-position: center;
   image-rendering: pixelated;
   background-size:80%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.AboutMe-body{
+  background-image: url("./pixel-components/book-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  background-size:80%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.Education-body{
+  background-image: url("./pixel-components/book-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  background-size:80%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.Projects-body{
+  background-image: url("./pixel-components/book-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  background-size:80%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.Back-body{
+  background-image: url("./pixel-components/back-page.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  image-rendering: pixelated;
+  background-size:40%;
 
   min-height: 100vh;
   display: flex;
