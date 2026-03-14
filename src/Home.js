@@ -1,40 +1,30 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import front from './pixel-components/front-page.png'; 
-// import About from "./About";
 
 const Home = () => {
-
-    const navigate = useNavigate();
-
-     const handleClick = () => {
-        navigate("/about");
-    };
-
-     const handleBack = () => {
-        navigate("/back");
-    };
+  const navigate = useNavigate();
 
   return (
-    <div className="App">
-      <header className="App-body">
-        {/* <img src={front} className="home" alt="front of notebook homepage" /> */}
-        <MyButton className="to-about" onClick={handleClick} />
-        <MyButton className="to-back" onClick={handleBack} />
+    <div className="notebook-container">
 
-        <area shape="rect" coords="123, 73, 129, 95" href="Education.js" onClick={handleClick}></area>
-      </header>
+      <div className="tabs">
+
+        <button onClick={() => navigate("/about")}>About</button>
+
+        <button onClick={() => navigate("/me")}>Me</button>
+
+        <button onClick={() => navigate("/education")}>Education</button>
+
+        <button onClick={() => navigate("/projects")}>Projects</button>
+
+      </div>
+
+      <div className="notebook-page">
+        {/* content or notebook background */}
+      </div>
+
     </div>
   );
 };
-
-function MyButton({ onClick, className }) {
-  return (
-    <button onClick={onClick} className={className}>
-      Hello
-    </button>
-  );
-}
 
 export default Home;

@@ -23,7 +23,7 @@ const About = () => {
 function MyButton({ onClick, className }) {
   return (
     <button onClick={onClick} className={className}>
-      Hello
+      Back
     </button>
   );
 }
