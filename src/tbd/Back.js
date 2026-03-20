@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import front from './pixel-components/book-page.png'; 
+import front from '../pixel-components/book-page.png'; 
 import { useNavigate } from "react-router-dom";
 
 const Back = () => {

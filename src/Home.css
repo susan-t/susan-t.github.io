@@ -1,0 +1,52 @@
+/* Update your container to handle scaling and centering */
+.home-notebook-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Base style for all notebook "pages" */
+.home-notebook-page-base {
+  position: relative; /* This is crucial for hitboxes */
+  width: 135px;  /* Original width of your front-page.png */
+  height: 150px; /* Original height of your front-page.png */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  
+  /* The scaling magic */
+  transform: scale(var(--notebook-scale, 4.5));
+  transform-origin: center center;
+}
+
+/* Home specific */
+.home-page {
+  background-image: url("./pixel-components/front-page.png");
+}
+
+/* The Hitboxes */
+.home-tab-hitbox {
+    position: absolute;
+    right: 0;
+    width: 10%;
+    height: 13%;
+    cursor: pointer;
+    z-index: 99; 
+    background-color: rgba(255, 0, 0, 0.4); 
+    outline: 2px solid yellow;
+}
+
+/* Cloud Text Area */
+.cloud-text {
+  position: absolute;
+  top: 32%;
+  left: 18%;
+  width: 54%;
+  font-family: 'Press Start 2P', cursive; /* Match NES.css */
+  font-size: 10px;
+  text-align: center;
+  pointer-events: none; /* Let clicks pass through to tabs */
+}

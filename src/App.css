@@ -1,147 +1,34 @@
-.App {
-  text-align: center;
-}
-
-/* div for overall page, holding the images/text */
-.App-body {
-  min-height: 100vh;
+/* Update your container to handle scaling and centering */
+.notebook-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center;  
+  min-height: 100vh;
+  overflow: hidden;
 }
 
-.notebook-container{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
+/* Base style for all notebook "pages" */
+.notebook-page-base {
+  position: relative; /* This is crucial for hitboxes */
+  width: 270px;  /* Original width of your front-page.png */
+  height: 150px; /* Original height of your front-page.png */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  
+  /* The scaling magic */
+  transform: scale(var(--notebook-scale, 4.5));
+  transform-origin: center center;
 }
 
-/* vertical tabs */
-.tabs{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-/* tab styling */
-.tabs button{
-  background:#f4c542;
-  border:2px solid #000;
-  padding:10px 20px;
-  font-family:monospace;
-  cursor:pointer;
-  border-radius:6px 0 0 6px;
-}
-
-.tabs button:hover{
-  background:#ffd866;
-}
-
-/* notebook page */
-.notebook-page{
-  width:500px;
-  height:600px;
-  background-image:url("./pixel-components/book-page.png");
-  background-size:contain;
-  background-repeat:no-repeat;
-}
-
-.About-body{
+/* Book specific */
+.book-page {
   background-image: url("./pixel-components/book-page.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  image-rendering: pixelated;
-  background-size:80%;
-
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
 }
 
-.AboutMe-body{
-  background-image: url("./pixel-components/book-page.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  image-rendering: pixelated;
-  background-size:80%;
+/* Scaling breakpoints */
+/* @media (min-width: 1400px) { .notebook-container { --notebook-scale: 2.0; } }
+@media (max-width: 600px)  { .notebook-container { --notebook-scale: 0.8; } } */
 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-}
 
-.Education-body{
-  background-image: url("./pixel-components/book-page.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  image-rendering: pixelated;
-  background-size:80%;
-
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-}
-
-.Projects-body{
-  background-image: url("./pixel-components/book-page.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  image-rendering: pixelated;
-  background-size:80%;
-
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-}
-
-.Back-body{
-  background-image: url("./pixel-components/back-page.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  image-rendering: pixelated;
-  background-size:40%;
-
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; 
-}
-
-/* the main image on the home page */
-/* .home{
-  width: 40%;
-  height: 40%;
-  display: block;
-  image-rendering: pixelated;
-} */
-
-.about{
-  width: 80%;
-  height: 80%;
-  display: block;
-  image-rendering: pixelated;
-}
-
-#btn{ 
-  /* background-color: transparent; */
-  /* border: none; */
-  color: black;
-  font-size: 20px;
-  cursor: pointer;
-}

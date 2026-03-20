@@ -1,0 +1,11 @@
+.tab-hitbox {
+  position: absolute;
+  right: 19px;
+  width: 5%;   /* Covers the tab area on the right */
+  height: 13%;  /* Height of one tab */
+  cursor: pointer;
+  z-index: 99;
+  /* background: rgba(255, 0, 0, 0.3); */ /* Uncomment to see them */
+  background-color: rgba(255, 0, 0, 0.4); 
+  outline: 2px solid yellow;
+}

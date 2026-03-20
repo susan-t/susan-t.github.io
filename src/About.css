@@ -1,0 +1,35 @@
+.About-body {
+  background-image: url("./pixel-components/book-page.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  background-size: 70%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+
+.about-content {
+    text-align: center;
+    color: #333; 
+    z-index: 10;
+    padding: 20px;
+}
+
+.to-home {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    cursor: pointer;
+    background: #f4c542;
+    border: 4px solid #000;
+}
+
+.to-home:hover {
+    background: #ffd866;
+}
