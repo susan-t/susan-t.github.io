@@ -1,31 +1,36 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import front from './pixel-components/book-page.png'; 
 import { useNavigate } from "react-router-dom";
+import Navbar from './Navbar';
+import './About.css';
 
 const About = () => {
     const navigate = useNavigate();
     
-         const handleClick = () => {
-            navigate("/home");
-        };
-  return (
-    <div className="App">
-      <header className="About-body">
-        {/* <img src={front} className="about" alt="about section of notebook" /> */}
-        <MyButton onClick={handleClick} className="to-home" />
+    const handleBackClick = () => {
+        navigate("/home");
+    };
 
-      </header>
+    return (
+    <div className="notebook-container">
+      {/* Use the base class that has the width/height/scale logic */}
+      <div className="notebook-page-base book-page">
+        <Navbar /> 
+        <p>about page</p>
+        <div className="about-content">
+            <MyButton onClick={handleBackClick} className="to-home" />
+        </div>
+      </div>
     </div>
   );
 };
 
+// Reusable Button Component
 function MyButton({ onClick, className }) {
-  return (
-    <button onClick={onClick} className={className}>
-      Back
-    </button>
-  );
+    return (
+        <button onClick={onClick} className={className} id="btn">
+            Back
+        </button>
+    );
 }
 
 export default About;
